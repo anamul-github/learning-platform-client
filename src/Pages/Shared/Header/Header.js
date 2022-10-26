@@ -1,46 +1,16 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import LeftNav from '../LeftNav/LeftNav';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect className='mb-4 p-4' expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">Learning Hour</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#features">Home</Nav.Link>
-                        <Nav.Link href="#pricing">Categories</Nav.Link>
-                        <Nav.Link href="#pricing">FAQ</Nav.Link>
-                        <Nav.Link href="#pricing">Blog</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                    <Nav>
-                        <Nav.Link href="#deets">Login</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Register
-                        </Nav.Link>
-                    </Nav>
-                    <div className='d-lg-none'>
-                        <LeftNav></LeftNav>
-                    </div>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <div>
+            <Link to="/category">Courses</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+        </div>
     );
 };
 
