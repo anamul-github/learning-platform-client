@@ -3,9 +3,25 @@ import './Header.css';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 const Header = () => {
+
+    const { providerLogin } = useContext(AuthContext);
+
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
     const { user } = useContext(AuthContext);
     return (
 
@@ -18,7 +34,7 @@ const Header = () => {
                     <Link to="/category">Courses</Link>
                     <Link to="/faq">FAQ</Link>
                     <Link to="/blog">Blog</Link>
-                    <Link to="/login">Login: {user?.displayName}</Link>
+                    <Link onClick={handleGoogleSignIn} to="/login">Login: {user?.displayName}</Link>
                     <Link to="/register">Register</Link>
                 </nav>
             </div>
