@@ -24,7 +24,7 @@ const Category = () => {
                             <Card.Text>
                                 {category.text}
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button variant="primary">Content Details</Button>
                         </Card.Body>
                     </Card>)
                 }

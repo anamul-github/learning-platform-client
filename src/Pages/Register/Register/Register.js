@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
@@ -55,6 +56,7 @@ const Register = () => {
                     Register
                 </Button>
             </Form>
+            <p><small>Already have an account? Please <Link to='/login'>Log in</Link></small></p>
         </div>
     );
 };
