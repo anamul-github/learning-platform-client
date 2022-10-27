@@ -15,7 +15,7 @@ const Category = () => {
 
     return (
         <div>
-            <div className="row row-cols-1 row-cols-md-4">
+            <div className="row row-cols-1 row-cols-md-4 my-5">
                 {
                     cardCategory.map(category => <Card className='m-3' key={category.id}>
                         <Card.Img variant="top" src={category.img} />

@@ -33,7 +33,7 @@ const Header = () => {
                     <Link to="/category">Courses</Link>
                     <Link to="/faq">FAQ</Link>
                     <Link to="/blog">Blog</Link>
-                    <FaToggleOn className='text-white mx-3'></FaToggleOn>
+                    <FaToggleOn className='text-white me-3'></FaToggleOn>
 
                     {
                         user?.uid ?
