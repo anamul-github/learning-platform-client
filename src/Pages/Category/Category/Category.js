@@ -20,14 +20,14 @@ const Category = () => {
         <div>
             <div className="row row-cols-1 row-cols-md-4 my-5">
                 {
-                    cardCategory.map(category => <Card className='m-3' key={category.id}>
+                    cardCategory.map(category => <Card className='m-3' key={category.category_id}>
                         <Card.Img variant="top" src={category.img} />
                         <Card.Body>
                             <Card.Title>{category.name}</Card.Title>
                             <Card.Text>
                                 {category.text}
                             </Card.Text>
-                            <Link to='/course/:id'>
+                            <Link to={`/contentDetails/${category.id}`}>
                                 <Button variant="primary">Content Details</Button>
                             </Link>
 
@@ -35,7 +35,7 @@ const Category = () => {
                     </Card>)
                 }
             </div>
-        </div>
+        </div >
     );
 };
 
