@@ -7,7 +7,6 @@ import { Button, Image, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { FaUser, FaChalkboardTeacher, FaToggleOn } from 'react-icons/fa';
 
 
-
 const Header = () => {
 
     const renderTooltip = (props) => (
