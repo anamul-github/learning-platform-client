@@ -9,7 +9,14 @@ const ContentDetails = () => {
     return (
 
         <div className='my-5 shadow-lg w-75 px-5 py-4'>
-            <h3>Name: {info.header}</h3>
+            <div className='d-flex justify-content-between py-2'>
+                <div>
+                    <h3>Name: {info.header}</h3>
+                </div>
+                <div>
+                    <Button className='bg-danger border-danger'>Download PDF</Button>
+                </div>
+            </div>
             <img className='img-fluid w-100' src={info.img} alt="" />
             <h6 className='mt-2'> {info.text}</h6>
             <h5 className='text-primary mt-3'>Price: ${info.price}</h5>
