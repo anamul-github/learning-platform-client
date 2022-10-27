@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LeftNav = () => {
+
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -17,8 +18,9 @@ const LeftNav = () => {
         <div className='my-5'>
             {
                 categories.map(category => <h5 className='py-2' key={category.id}>
-                    <Link className='text-decoration-none' to={`/category/:${category.id}`}>{category.name}</Link>
+                    <Link to='/course' className='text-decoration-none'>{category.name}</Link>
                 </h5>)
+                // {`/category/:${category.id}`}
             }
         </div>
 

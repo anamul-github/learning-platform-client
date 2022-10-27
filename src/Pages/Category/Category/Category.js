@@ -3,8 +3,11 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+
 
 const Category = () => {
+
     const [cardCategory, setCardCategory] = useState([]);
 
     useEffect(() => {
@@ -24,7 +27,10 @@ const Category = () => {
                             <Card.Text>
                                 {category.text}
                             </Card.Text>
-                            <Button variant="primary">Content Details</Button>
+                            <Link to='/course/:id'>
+                                <Button variant="primary">Content Details</Button>
+                            </Link>
+
                         </Card.Body>
                     </Card>)
                 }

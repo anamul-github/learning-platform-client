@@ -1,9 +1,12 @@
 import React from 'react';
 
-const ContentDetails = ({ course }) => {
+
+const ContentDetails = () => {
+
     return (
+
         <div>
-            <h2>{course.text}</h2>
+
         </div>
     );
 };

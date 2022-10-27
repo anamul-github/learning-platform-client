@@ -30,7 +30,7 @@ const Header = () => {
             </div>
             <div>
                 <nav className='text-center links p-5'>
-                    <Link to="/category">Courses</Link>
+                    <Link to="/category">Category</Link>
                     <Link to="/faq">FAQ</Link>
                     <Link to="/blog">Blog</Link>
                     <FaToggleOn className='text-white me-3'></FaToggleOn>

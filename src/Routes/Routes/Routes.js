@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
 import Blog from "../../Pages/Blog/Blog/Blog";
 import Category from "../../Pages/Category/Category/Category";
+import Course from "../../Pages/Course/Course/Course";
 import FAQ from "../../Pages/FAQ/FAQ/FAQ";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
@@ -16,22 +17,36 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/categories')
+                loader: () => fetch('http://localhost:5000/course')
             },
             {
                 path: '/category',
-                element: <Category></Category>,
+                element: <Category></Category>
             },
-
             {
                 path: '/category/:id',
-                element: <ContentDetails></ContentDetails>,
+                element: <Category></Category>,
                 loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+            },
+
+            // {
+            //     path: '/category/:id',
+            //     element: <ContentDetails></ContentDetails>,
+            //     loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+            // },
+            {
+                path: '/course',
+                element: <Course></Course>,
+                loader: () => fetch('http://localhost:5000/course')
             },
             {
                 path: '/course/:id',
-                element: <ContentDetails></ContentDetails>,
+                element: <Course></Course>,
                 loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+            },
+            {
+                path: '/contentDetails',
+                element: <ContentDetails></ContentDetails>
             },
             {
                 path: '/faq',
