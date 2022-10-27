@@ -1,10 +1,11 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+import { FaGithub } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -61,7 +62,7 @@ const Login = () => {
     }
 
     return (
-        <div className='w-50 mx-auto my-5'>
+        <div className='w-50 mx-auto my-5 w-sm-100'>
             <h2 className='text-primary'>Please Login</h2>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -80,10 +81,10 @@ const Login = () => {
                 </Button>
                 <br />
                 <br />
-                <ButtonGroup vertical>
-                    <Button onClick={handleGoogleSignIn} variant="outline-primary">Login with Google</Button>
-                    <Button onClick={handleGithubSignIn} variant="outline-secondary">Login with Github</Button>
-                </ButtonGroup>
+
+                <Button onClick={handleGoogleSignIn} variant="outline-primary"><span><FcGoogle></FcGoogle></span> Login with Google</Button>
+                <Button onClick={handleGithubSignIn} variant="outline-secondary"><span><FaGithub></FaGithub></span> Login with Github</Button>
+
             </Form>
             <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
         </div>
