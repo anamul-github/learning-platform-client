@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { Button, Image, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { FaUser, FaChalkboardTeacher } from 'react-icons/fa';
+import { FaUser, FaChalkboardTeacher, FaToggleOn } from 'react-icons/fa';
 
 
 
@@ -34,6 +34,7 @@ const Header = () => {
                     <Link to="/category">Courses</Link>
                     <Link to="/faq">FAQ</Link>
                     <Link to="/blog">Blog</Link>
+                    <FaToggleOn className='text-white mx-3'></FaToggleOn>
 
                     {
                         user?.uid ?
