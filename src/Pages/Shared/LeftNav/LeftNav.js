@@ -16,6 +16,7 @@ const LeftNav = () => {
     return (
 
         <div className='my-5'>
+            <h2 className='mb-3'>Available Courses:</h2>
             {
                 categories.map(category => <h5 className='py-2' key={category.category_id}>
                     <Link to={`/contentDetails/${category.id}`} className='text-decoration-none'>{category.name}</Link>
