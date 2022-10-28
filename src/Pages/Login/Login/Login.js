@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import { useState } from 'react';
+import './Login.css';
 
 const Login = () => {
 
@@ -72,7 +73,7 @@ const Login = () => {
     }
 
     return (
-        <div className='w-50 mx-auto my-5 pb-5'>
+        <div className='w-50 mx-auto my-5 pb-5 login'>
             <h2 className='text-primary'>Please Login</h2>
             <br />
             <Form onSubmit={handleLogin}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './LeftNav.css';
 
 const LeftNav = () => {
 
@@ -15,7 +16,7 @@ const LeftNav = () => {
 
     return (
 
-        <div className='my-5'>
+        <div className='my-5 left-nav'>
             <h2 className='mb-3'>Available Courses:</h2>
             {
                 categories.map(category => <h5 className='py-2' key={category.category_id}>

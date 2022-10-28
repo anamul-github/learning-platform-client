@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import './Register.css';
 
 
 const Register = () => {
@@ -34,7 +35,7 @@ const Register = () => {
     }
 
     return (
-        <div className='w-50 mx-auto my-5'>
+        <div className='w-50 mx-auto my-5 register'>
             <h2 className='text-primary'>Please Register</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

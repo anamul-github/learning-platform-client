@@ -1,6 +1,6 @@
 .header {
     background-color: #0D0D0D;
-    width: 100%;
+    width: 100% !important;
 }
 
 .title {
@@ -15,12 +15,17 @@
 
 @media only screen and (max-width: 576px) {
     .header {
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
         padding-top: 20px;
         text-align: center !important;
+        width: 100% !important;
+
     }
 
-    .links {
+    .links a {
         padding-top: 10px !important;
+        display: block !important;
+
     }
 }
