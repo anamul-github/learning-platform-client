@@ -6,8 +6,11 @@ import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
+import { useState } from 'react';
 
 const Login = () => {
+
+    const [error, setError] = useState('');
 
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate();
@@ -24,10 +27,12 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
-                navigate('/category');
+                setError('');
+                navigate('/');
             })
             .catch(error => {
                 console.error('error:', error);
+                setError(error.message);
             })
     }
 
@@ -41,6 +46,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate('/');
             })
             .catch(error => {
                 console.log(error);
@@ -55,6 +61,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate('/');
             })
             .catch(error => {
                 console.log(error);
@@ -80,6 +87,9 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Login
                 </Button>
+                <Form.Text className='text-danger'>
+                    <p>{error}</p>
+                </Form.Text>
                 <br />
                 <br />
 

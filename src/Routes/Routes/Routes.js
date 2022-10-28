@@ -4,7 +4,6 @@ import Blog from "../../Pages/Blog/Blog/Blog";
 import Category from "../../Pages/Category/Category/Category";
 import Checkout from "../../Pages/Checkout/Checkout/Checkout";
 import FAQ from "../../Pages/FAQ/FAQ/FAQ";
-import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Register/Register/Register";
 import ContentDetails from "../../Pages/Shared/ContentDetails/ContentDetails/ContentDetails";
@@ -16,7 +15,7 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Category></Category>
             },
             {
                 path: '/categories',
