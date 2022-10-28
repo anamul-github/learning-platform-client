@@ -1,6 +1,9 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import { FaDownload } from 'react-icons/fa';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 
 const ContentDetails = () => {
@@ -13,8 +16,16 @@ const ContentDetails = () => {
                 <div>
                     <h3>Name: {info.header}</h3>
                 </div>
-                <div>
-                    <Button className='bg-danger border-danger'>Download PDF</Button>
+                <div className='d-flex'>
+                    <div ref={ref} >
+                        <FaDownload></FaDownload>
+                    </div>
+                    <div className='mx-2'>
+                        <Pdf targetRef={ref} filename="code-example.pdf">
+                            {({ toPdf }) => <Button className='bg-danger border-danger' onClick={toPdf}>Download PDF</Button>}
+                        </Pdf>
+                    </div>
+
                 </div>
             </div>
             <img className='img-fluid w-100' src={info.img} alt="" />
