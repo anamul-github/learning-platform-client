@@ -21,13 +21,13 @@ export const routes = createBrowserRouter([
             {
                 path: '/categories',
                 element: <Category></Category>,
-                loader: () => fetch(`http://localhost:5000/categories`)
+                loader: () => fetch(`https://learning-hour-server.vercel.app/categories`)
             },
 
             {
                 path: '/contentDetails/:id',
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/contentDetails/${params.id}`)
+                    return fetch(`https://learning-hour-server.vercel.app/contentDetails/${params.id}`)
                 },
                 element: <ContentDetails></ContentDetails>
             },
@@ -50,7 +50,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/contentDetails/${params.id}`)
+                    return fetch(`https://learning-hour-server.vercel.app/contentDetails/${params.id}`)
                 },
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
             },
