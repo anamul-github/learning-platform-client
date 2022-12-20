@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaDownload } from 'react-icons/fa';
 import Pdf from "react-to-pdf";
+
 const ref = React.createRef();
 
 
@@ -11,7 +12,7 @@ const ContentDetails = () => {
     console.log(info);
     return (
 
-        <div className='my-5 shadow-lg w-75 px-5 py-4'>
+        <div className='my-5 shadow-lg w-100 px-5 py-4'>
             <div className='d-flex justify-content-between py-2'>
                 <div>
                     <h3>Name: {info.header}</h3>

@@ -30,10 +30,11 @@ const Header = () => {
             </div>
             <div>
                 <nav className='text-center links p-5'>
+                    <FaToggleOn className='text-white me-3 toggle-logo'></FaToggleOn>
                     <Link to="/categories">Category</Link>
                     <Link to="/faq">FAQ</Link>
                     <Link to="/blog">Blog</Link>
-                    <FaToggleOn className='text-white me-3'></FaToggleOn>
+
 
                     {
                         user?.uid ?
@@ -59,8 +60,9 @@ const Header = () => {
                                 src={user?.photoURL}>
                             </Image>
                         </OverlayTrigger>
-                        : <FaUser className='text-white'></FaUser>
+                        : <FaUser className='text-white user-logo'></FaUser>
                     }
+
 
                 </nav>
             </div>
