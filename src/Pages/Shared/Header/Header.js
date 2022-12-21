@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { Button, Image, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { FaUser, FaChalkboardTeacher, FaToggleOn } from 'react-icons/fa';
+import { FaUser, FaChalkboardTeacher } from 'react-icons/fa';
 
 
 const Header = () => {
@@ -23,6 +23,7 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
+        //use bootstrap component
 
         <div className='d-flex justify-content-between align-items-center header px-5'>
             <div>
@@ -30,7 +31,6 @@ const Header = () => {
             </div>
             <div>
                 <nav className='text-center links p-5'>
-                    <FaToggleOn className='text-white me-3 toggle-logo'></FaToggleOn>
                     <Link to="/categories">Category</Link>
                     <Link to="/faq">FAQ</Link>
                     <Link to="/blog">Blog</Link>

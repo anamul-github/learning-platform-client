@@ -4,17 +4,28 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import Loader from '../../Shared/Loader/Loader';
 
 
 const Category = () => {
 
     const [cardCategory, setCardCategory] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
         fetch('https://learning-hour-server.vercel.app/categories')
             .then(res => res.json())
-            .then(data => setCardCategory(data))
-    }, [])
+            .then(data => {
+                setCardCategory(data)
+                setLoading(false)
+            }
+            )
+    }, [setLoading]);
+
+    if (loading) {
+        return <div className='d-flex justify-content-center align-items-center vh-100'><Loader></Loader></div>;
+    }
 
     return (
         <div>
